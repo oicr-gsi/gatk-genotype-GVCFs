@@ -159,8 +159,7 @@ task callGenomicsDBImport {
 
   meta {
     output_meta: {
-      mergedVcf: "Merged vcf",
-      mergedVcfTbi: "Merged vcf index"
+      output_genomicsdb: "GenomicsDB workspace tar file"
     }
   }
   
