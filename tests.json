@@ -15,15 +15,15 @@
   "tests": [
     {
       "id": "genotypeGVCFs",
-      "description": "run genotypeGVCFs without VQSR",
+      "description": "run genotypeGVCFs without hardfilter without VQSR",
       "parameters": {
         "wdl_inputs": {
           "genotypeGVCFs.vcfIndices": ["/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_1.g.vcf.gz.tbi","/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_3.g.vcf.gz.tbi","/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_2.g.vcf.gz.tbi"],
           "genotypeGVCFs.vcfs":["/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_1.g.vcf.gz","/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_3.g.vcf.gz","/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_2.g.vcf.gz"],
           "genotypeGVCFs.intervalsToParallelizeBy": "chr1,chr2,chr3,chr4,chr5,chr6,chr7,chr8,chr9,chr10,chr11,chr12,chr13,chr14,chr15,chr16,chr17,chr18,chr19,chr20,chr21,chr22,chrX,chrY",
           "genotypeGVCFs.outputFileNamePrefix": "TGL38_0006",
-          "genotypeGVCFs.doHardFilter": "true",
-          "genotypeGVCFs.doVQSR": "true",
+          "genotypeGVCFs.doHardFilter": "false",
+          "genotypeGVCFs.doVQSR": "false",
           "genotypeGVCFs.callGenotypeGVCFs.refFasta": "$HG19_ROOT/hg19_random.fa",
           "genotypeGVCFs.callGenotypeGVCFs.dbsnpFilePath": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
           "genotypeGVCFs.callGenotypeGVCFs.modules": "gatk/4.1.7.0 hg19/p13 hg19-dbsnp-leftaligned/138",
@@ -89,7 +89,7 @@
     },
      {
       "id": "genotypeGVCFs_hardfilter_VQSR",
-      "description": "run genotypeGVCFs without hardfilter withVQSR",
+      "description": "run genotypeGVCFs with hardfilter withVQSR",
       "parameters": {
         "wdl_inputs": {
           "genotypeGVCFs.vcfIndices": ["/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_1.g.vcf.gz.tbi","/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_3.g.vcf.gz.tbi","/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_2.g.vcf.gz.tbi"],

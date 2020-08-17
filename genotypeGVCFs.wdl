@@ -789,8 +789,8 @@ task collectVariantCallingMetrics {
 
   meta {
     output_meta: {
-      recalibrated_vcf: "The output recalibrated VCF file in which each variant is annotated with its VQSLOD value",
-      recalibrated_vcf_index: "The output recalibrated VCF index file"
+      detail_metrics_file: "The output detailed metrics report file",
+      summary_metrics_file: "The output summary metrics report file."
     }
   }
 

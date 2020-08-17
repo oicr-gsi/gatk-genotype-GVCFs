@@ -134,8 +134,8 @@ Output | Type | Description
 ---|---|---
 `output_raw_vcf`|File|Merged raw vcf
 `output_raw_vcf_index`|File|Merged raw vcf index
-`detail_metrics_file`|File?|None
-`summary_metrics_file`|File?|None
+`detail_metrics_file`|File?|The output detailed metrics report file
+`summary_metrics_file`|File?|The output summary metrics report file.
 `output_recalibrated_vcf`|File?|The output recalibrated VCF file in which each variant is annotated with its VQSLOD value
 `output_recalibrated_vcf_index`|File?|The output recalibrated VCF index file
 
