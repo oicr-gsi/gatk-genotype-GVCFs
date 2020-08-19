@@ -180,7 +180,6 @@ task callGenomicsDBImport {
 
   command <<<
     set -euo pipefail
-    rm -rf ~{workspace_dir_name}
     mkdir -p ~{tmpDir}
 
     gatk --java-options -Xmx~{jobMemory - overhead}G \
