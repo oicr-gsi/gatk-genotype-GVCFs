@@ -1,0 +1,128 @@
+{
+  "defaults": {
+    "description": "GATKGenotypeGVCFs workflow test",
+    "metrics_calculate": "calculate.sh",
+    "metrics_compare": "compare.sh",
+    "output_metrics_dir": "/.mounts/labs/gsi/testdata/genotypeGVCFs/2.0/output_metrics/",
+    "parameters": {
+      "wdl_options": {
+        "read_from_cache": false,
+        "write_to_cache": false
+      }
+    }
+  },
+
+  "tests": [
+    {
+      "id": "genotypeGVCFs",
+      "description": "run genotypeGVCFs without hardfilter without VQSR",
+      "parameters": {
+        "wdl_inputs": {
+          "genotypeGVCFs.vcfIndices": ["/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_1.g.vcf.gz.tbi","/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_3.g.vcf.gz.tbi","/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_2.g.vcf.gz.tbi"],
+          "genotypeGVCFs.vcfs":["/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_1.g.vcf.gz","/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_3.g.vcf.gz","/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_2.g.vcf.gz"],
+          "genotypeGVCFs.intervalsToParallelizeBy": "chr1,chr2,chr3,chr4,chr5,chr6,chr7,chr8,chr9,chr10,chr11,chr12,chr13,chr14,chr15,chr16,chr17,chr18,chr19,chr20,chr21,chr22,chrX,chrY",
+          "genotypeGVCFs.outputFileNamePrefix": "TGL38_0006",
+          "genotypeGVCFs.doHardFilter": "false",
+          "genotypeGVCFs.doVQSR": "false",
+          "genotypeGVCFs.callGenotypeGVCFs.refFasta": "$HG19_ROOT/hg19_random.fa",
+          "genotypeGVCFs.callGenotypeGVCFs.dbsnpFilePath": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+          "genotypeGVCFs.callGenotypeGVCFs.modules": "gatk/4.1.7.0 hg19/p13 hg19-dbsnp-leftaligned/138",
+          "genotypeGVCFs.indelsVariantRecalibrator.modules": "gatk/4.1.7.0 hg19-gatk-genotype-gvcfs/2.0 hg19-dbsnp-leftaligned/138",
+          "genotypeGVCFs.indelsVariantRecalibrator.mills_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Mills_and_1000G_gold_standard.indels.hg19.sites.vcf.gz",
+          "genotypeGVCFs.indelsVariantRecalibrator.mills_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Mills_and_1000G_gold_standard.indels.hg19.sites.vcf.gz.tbi",
+          "genotypeGVCFs.indelsVariantRecalibrator.axiomPoly_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Axiom_Exome_Plus.genotypes.all_populations.poly.vcf.gz",
+          "genotypeGVCFs.indelsVariantRecalibrator.axiomPoly_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Axiom_Exome_Plus.genotypes.all_populations.poly.vcf.gz.tbi",
+          "genotypeGVCFs.indelsVariantRecalibrator.dbsnp_vcf": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+          "genotypeGVCFs.indelsVariantRecalibrator.dbsnp_vcf_index": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz.tbi",
+          "genotypeGVCFs.snpsVariantRecalibrator.modules": "gatk/4.1.7.0 hg19-gatk-genotype-gvcfs/2.0 hg19-dbsnp-leftaligned/138",
+          "genotypeGVCFs.snpsVariantRecalibrator.hapmap_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/hapmap_3.3.hg19.sites.vcf.gz",
+          "genotypeGVCFs.snpsVariantRecalibrator.hapmap_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/hapmap_3.3.hg19.sites.vcf.gz.tbi",
+          "genotypeGVCFs.snpsVariantRecalibrator.omni_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_omni2.5.hg19.sites.vcf.gz",
+          "genotypeGVCFs.snpsVariantRecalibrator.omni_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_omni2.5.hg19.sites.vcf.gz.tbi",
+          "genotypeGVCFs.snpsVariantRecalibrator.one_thousand_genomes_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_phase1.snps.high_confidence.hg19.sites.vcf.gz",
+          "genotypeGVCFs.snpsVariantRecalibrator.one_thousand_genomes_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_phase1.snps.high_confidence.hg19.sites.vcf.gz.tbi",
+          "genotypeGVCFs.snpsVariantRecalibrator.dbsnp_vcf": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+          "genotypeGVCFs.snpsVariantRecalibrator.dbsnp_vcf_index": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz.tbi",
+          "genotypeGVCFs.collectVariantCallingMetrics.modules": "gatk/4.1.7.0 hg19/p13 hg19-dbsnp-leftaligned/138",
+          "genotypeGVCFs.collectVariantCallingMetrics.dbsnp_vcf": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+          "genotypeGVCFs.collectVariantCallingMetrics.dbsnp_vcf_index": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz.tbi",
+          "genotypeGVCFs.collectVariantCallingMetrics.ref_dict": "$HG19_ROOT/hg19_random.dict"
+        }
+      }
+    },
+    {
+      "id": "genotypeGVCFs_nohardfilter_VQSR",
+      "description": "run genotypeGVCFs without hardfilter withVQSR",
+      "parameters": {
+        "wdl_inputs": {
+          "genotypeGVCFs.vcfIndices": ["/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_1.g.vcf.gz.tbi","/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_3.g.vcf.gz.tbi","/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_2.g.vcf.gz.tbi"],
+          "genotypeGVCFs.vcfs":["/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_1.g.vcf.gz","/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_3.g.vcf.gz","/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_2.g.vcf.gz"],
+          "genotypeGVCFs.intervalsToParallelizeBy": "chr1,chr2,chr3,chr4,chr5,chr6,chr7,chr8,chr9,chr10,chr11,chr12,chr13,chr14,chr15,chr16,chr17,chr18,chr19,chr20,chr21,chr22,chrX,chrY",
+          "genotypeGVCFs.outputFileNamePrefix": "TGL38_0006",
+          "genotypeGVCFs.doHardFilter": "false",
+          "genotypeGVCFs.doVQSR": "true",
+          "genotypeGVCFs.callGenotypeGVCFs.refFasta": "$HG19_ROOT/hg19_random.fa",
+          "genotypeGVCFs.callGenotypeGVCFs.dbsnpFilePath": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+          "genotypeGVCFs.callGenotypeGVCFs.modules": "gatk/4.1.7.0 hg19/p13 hg19-dbsnp-leftaligned/138",
+          "genotypeGVCFs.indelsVariantRecalibrator.modules": "gatk/4.1.7.0 hg19-gatk-genotype-gvcfs/2.0 hg19-dbsnp-leftaligned/138",
+          "genotypeGVCFs.indelsVariantRecalibrator.mills_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Mills_and_1000G_gold_standard.indels.hg19.sites.vcf.gz",
+          "genotypeGVCFs.indelsVariantRecalibrator.mills_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Mills_and_1000G_gold_standard.indels.hg19.sites.vcf.gz.tbi",
+          "genotypeGVCFs.indelsVariantRecalibrator.axiomPoly_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Axiom_Exome_Plus.genotypes.all_populations.poly.vcf.gz",
+          "genotypeGVCFs.indelsVariantRecalibrator.axiomPoly_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Axiom_Exome_Plus.genotypes.all_populations.poly.vcf.gz.tbi",
+          "genotypeGVCFs.indelsVariantRecalibrator.dbsnp_vcf": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+          "genotypeGVCFs.indelsVariantRecalibrator.dbsnp_vcf_index": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz.tbi",
+          "genotypeGVCFs.snpsVariantRecalibrator.modules": "gatk/4.1.7.0 hg19-gatk-genotype-gvcfs/2.0 hg19-dbsnp-leftaligned/138",
+          "genotypeGVCFs.snpsVariantRecalibrator.hapmap_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/hapmap_3.3.hg19.sites.vcf.gz",
+          "genotypeGVCFs.snpsVariantRecalibrator.hapmap_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/hapmap_3.3.hg19.sites.vcf.gz.tbi",
+          "genotypeGVCFs.snpsVariantRecalibrator.omni_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_omni2.5.hg19.sites.vcf.gz",
+          "genotypeGVCFs.snpsVariantRecalibrator.omni_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_omni2.5.hg19.sites.vcf.gz.tbi",
+          "genotypeGVCFs.snpsVariantRecalibrator.one_thousand_genomes_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_phase1.snps.high_confidence.hg19.sites.vcf.gz",
+          "genotypeGVCFs.snpsVariantRecalibrator.one_thousand_genomes_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_phase1.snps.high_confidence.hg19.sites.vcf.gz.tbi",
+          "genotypeGVCFs.snpsVariantRecalibrator.dbsnp_vcf": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+          "genotypeGVCFs.snpsVariantRecalibrator.dbsnp_vcf_index": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz.tbi",
+          "genotypeGVCFs.collectVariantCallingMetrics.modules": "gatk/4.1.7.0 hg19/p13 hg19-dbsnp-leftaligned/138",
+          "genotypeGVCFs.collectVariantCallingMetrics.dbsnp_vcf": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+          "genotypeGVCFs.collectVariantCallingMetrics.dbsnp_vcf_index": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz.tbi",
+          "genotypeGVCFs.collectVariantCallingMetrics.ref_dict": "$HG19_ROOT/hg19_random.dict"
+        }
+      }
+    },
+     {
+      "id": "genotypeGVCFs_hardfilter_VQSR",
+      "description": "run genotypeGVCFs with hardfilter withVQSR",
+      "parameters": {
+        "wdl_inputs": {
+          "genotypeGVCFs.vcfIndices": ["/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_1.g.vcf.gz.tbi","/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_3.g.vcf.gz.tbi","/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_2.g.vcf.gz.tbi"],
+          "genotypeGVCFs.vcfs":["/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_1.g.vcf.gz","/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_3.g.vcf.gz","/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_2.g.vcf.gz"],
+          "genotypeGVCFs.intervalsToParallelizeBy": "chr1,chr2,chr3,chr4,chr5,chr6,chr7,chr8,chr9,chr10,chr11,chr12,chr13,chr14,chr15,chr16,chr17,chr18,chr19,chr20,chr21,chr22,chrX,chrY",
+          "genotypeGVCFs.outputFileNamePrefix": "TGL38_0006",
+          "genotypeGVCFs.doHardFilter": "true",
+          "genotypeGVCFs.doVQSR": "true",
+          "genotypeGVCFs.callGenotypeGVCFs.refFasta": "$HG19_ROOT/hg19_random.fa",
+          "genotypeGVCFs.callGenotypeGVCFs.dbsnpFilePath": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+          "genotypeGVCFs.callGenotypeGVCFs.modules": "gatk/4.1.7.0 hg19/p13 hg19-dbsnp-leftaligned/138",
+          "genotypeGVCFs.indelsVariantRecalibrator.modules": "gatk/4.1.7.0 hg19-gatk-genotype-gvcfs/2.0 hg19-dbsnp-leftaligned/138",
+          "genotypeGVCFs.indelsVariantRecalibrator.mills_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Mills_and_1000G_gold_standard.indels.hg19.sites.vcf.gz",
+          "genotypeGVCFs.indelsVariantRecalibrator.mills_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Mills_and_1000G_gold_standard.indels.hg19.sites.vcf.gz.tbi",
+          "genotypeGVCFs.indelsVariantRecalibrator.axiomPoly_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Axiom_Exome_Plus.genotypes.all_populations.poly.vcf.gz",
+          "genotypeGVCFs.indelsVariantRecalibrator.axiomPoly_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Axiom_Exome_Plus.genotypes.all_populations.poly.vcf.gz.tbi",
+          "genotypeGVCFs.indelsVariantRecalibrator.dbsnp_vcf": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+          "genotypeGVCFs.indelsVariantRecalibrator.dbsnp_vcf_index": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz.tbi",
+          "genotypeGVCFs.snpsVariantRecalibrator.modules": "gatk/4.1.7.0 hg19-gatk-genotype-gvcfs/2.0 hg19-dbsnp-leftaligned/138",
+          "genotypeGVCFs.snpsVariantRecalibrator.hapmap_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/hapmap_3.3.hg19.sites.vcf.gz",
+          "genotypeGVCFs.snpsVariantRecalibrator.hapmap_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/hapmap_3.3.hg19.sites.vcf.gz.tbi",
+          "genotypeGVCFs.snpsVariantRecalibrator.omni_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_omni2.5.hg19.sites.vcf.gz",
+          "genotypeGVCFs.snpsVariantRecalibrator.omni_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_omni2.5.hg19.sites.vcf.gz.tbi",
+          "genotypeGVCFs.snpsVariantRecalibrator.one_thousand_genomes_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_phase1.snps.high_confidence.hg19.sites.vcf.gz",
+          "genotypeGVCFs.snpsVariantRecalibrator.one_thousand_genomes_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_phase1.snps.high_confidence.hg19.sites.vcf.gz.tbi",
+          "genotypeGVCFs.snpsVariantRecalibrator.dbsnp_vcf": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+          "genotypeGVCFs.snpsVariantRecalibrator.dbsnp_vcf_index": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz.tbi",
+          "genotypeGVCFs.collectVariantCallingMetrics.modules": "gatk/4.1.7.0 hg19/p13 hg19-dbsnp-leftaligned/138",
+          "genotypeGVCFs.collectVariantCallingMetrics.dbsnp_vcf": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+          "genotypeGVCFs.collectVariantCallingMetrics.dbsnp_vcf_index": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz.tbi",
+          "genotypeGVCFs.collectVariantCallingMetrics.ref_dict": "$HG19_ROOT/hg19_random.dict"
+        }
+      }
+    }   
+  ]
+}
