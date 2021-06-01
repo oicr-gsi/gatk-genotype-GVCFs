@@ -1,0 +1,6 @@
+{
+    "names": [
+        "genotypeGVCFs"
+    ],
+    "wdl": "genotypeGVCFs.wdl"
+}
