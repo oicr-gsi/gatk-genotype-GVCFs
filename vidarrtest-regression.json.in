@@ -1,0 +1,701 @@
+[
+    {
+        "arguments": {
+            "genotypeGVCFs.applyRecalibration.cores": null,
+            "genotypeGVCFs.applyRecalibration.extraArgsIndel": null,
+            "genotypeGVCFs.applyRecalibration.extraArgsSNP": null,
+            "genotypeGVCFs.applyRecalibration.indel_filter_level": null,
+            "genotypeGVCFs.applyRecalibration.jobMemory": null,
+            "genotypeGVCFs.applyRecalibration.modules": null,
+            "genotypeGVCFs.applyRecalibration.overhead": null,
+            "genotypeGVCFs.applyRecalibration.snp_filter_level": null,
+            "genotypeGVCFs.applyRecalibration.timeout": null,
+            "genotypeGVCFs.callGenomicsDBImport.cores": null,
+            "genotypeGVCFs.callGenomicsDBImport.extraArgs": null,
+            "genotypeGVCFs.callGenomicsDBImport.jobMemory": null,
+            "genotypeGVCFs.callGenomicsDBImport.modules": null,
+            "genotypeGVCFs.callGenomicsDBImport.overhead": null,
+            "genotypeGVCFs.callGenomicsDBImport.timeout": null,
+            "genotypeGVCFs.callGenotypeGVCFs.cores": null,
+            "genotypeGVCFs.callGenotypeGVCFs.dbsnpFilePath": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+            "genotypeGVCFs.callGenotypeGVCFs.extraArgs": null,
+            "genotypeGVCFs.callGenotypeGVCFs.jobMemory": null,
+            "genotypeGVCFs.callGenotypeGVCFs.modules": "gatk/4.1.7.0 hg19/p13 hg19-dbsnp-leftaligned/138",
+            "genotypeGVCFs.callGenotypeGVCFs.overhead": null,
+            "genotypeGVCFs.callGenotypeGVCFs.refFasta": "$HG19_ROOT/hg19_random.fa",
+            "genotypeGVCFs.callGenotypeGVCFs.standCallConf": null,
+            "genotypeGVCFs.callGenotypeGVCFs.timeout": null,
+            "genotypeGVCFs.collectVariantCallingMetrics.cores": null,
+            "genotypeGVCFs.collectVariantCallingMetrics.dbsnp_vcf": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+            "genotypeGVCFs.collectVariantCallingMetrics.dbsnp_vcf_index": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz.tbi",
+            "genotypeGVCFs.collectVariantCallingMetrics.extraArgs": null,
+            "genotypeGVCFs.collectVariantCallingMetrics.jobMemory": null,
+            "genotypeGVCFs.collectVariantCallingMetrics.modules": "gatk/4.1.7.0 hg19/p13 hg19-dbsnp-leftaligned/138",
+            "genotypeGVCFs.collectVariantCallingMetrics.overhead": null,
+            "genotypeGVCFs.collectVariantCallingMetrics.ref_dict": "$HG19_ROOT/hg19_random.dict",
+            "genotypeGVCFs.collectVariantCallingMetrics.timeout": null,
+            "genotypeGVCFs.doHardFilter": false,
+            "genotypeGVCFs.doVQSR": false,
+            "genotypeGVCFs.gatherVcfs.cores": null,
+            "genotypeGVCFs.gatherVcfs.extraArgs": null,
+            "genotypeGVCFs.gatherVcfs.jobMemory": null,
+            "genotypeGVCFs.gatherVcfs.modules": null,
+            "genotypeGVCFs.gatherVcfs.overhead": null,
+            "genotypeGVCFs.gatherVcfs.timeout": null,
+            "genotypeGVCFs.hardFilter.cores": null,
+            "genotypeGVCFs.hardFilter.excess_het_threshold": null,
+            "genotypeGVCFs.hardFilter.extraArgs": null,
+            "genotypeGVCFs.hardFilter.jobMemory": null,
+            "genotypeGVCFs.hardFilter.modules": null,
+            "genotypeGVCFs.hardFilter.overhead": null,
+            "genotypeGVCFs.hardFilter.timeout": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.axiomPoly_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Axiom_Exome_Plus.genotypes.all_populations.poly.vcf.gz.tbi",
+            "genotypeGVCFs.indelsVariantRecalibrator.axiomPoly_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Axiom_Exome_Plus.genotypes.all_populations.poly.vcf.gz",
+            "genotypeGVCFs.indelsVariantRecalibrator.cores": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.dbsnp_vcf": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+            "genotypeGVCFs.indelsVariantRecalibrator.dbsnp_vcf_index": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz.tbi",
+            "genotypeGVCFs.indelsVariantRecalibrator.extraArgs": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.jobMemory": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.max_gaussians": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.mills_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Mills_and_1000G_gold_standard.indels.hg19.sites.vcf.gz",
+            "genotypeGVCFs.indelsVariantRecalibrator.mills_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Mills_and_1000G_gold_standard.indels.hg19.sites.vcf.gz.tbi",
+            "genotypeGVCFs.indelsVariantRecalibrator.modules": "gatk/4.1.7.0 hg19-gatk-genotype-gvcfs/2.0 hg19-dbsnp-leftaligned/138",
+            "genotypeGVCFs.indelsVariantRecalibrator.overhead": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.recalibration_annotation_values": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.recalibration_tranche_values": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.timeout": null,
+            "genotypeGVCFs.intervalsToParallelizeBy": "chr1,chr2,chr3,chr4,chr5,chr6,chr7,chr8,chr9,chr10,chr11,chr12,chr13,chr14,chr15,chr16,chr17,chr18,chr19,chr20,chr21,chr22,chrX,chrY",
+            "genotypeGVCFs.makeSitesOnlyVcf.cores": null,
+            "genotypeGVCFs.makeSitesOnlyVcf.extraArgs": null,
+            "genotypeGVCFs.makeSitesOnlyVcf.jobMemory": null,
+            "genotypeGVCFs.makeSitesOnlyVcf.modules": null,
+            "genotypeGVCFs.makeSitesOnlyVcf.overhead": null,
+            "genotypeGVCFs.makeSitesOnlyVcf.timeout": null,
+            "genotypeGVCFs.outputFileNamePrefix": "TGL38_0006",
+            "genotypeGVCFs.snpsVariantRecalibrator.cores": null,
+            "genotypeGVCFs.snpsVariantRecalibrator.dbsnp_vcf": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+            "genotypeGVCFs.snpsVariantRecalibrator.dbsnp_vcf_index": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz.tbi",
+            "genotypeGVCFs.snpsVariantRecalibrator.extraArgs": null,
+            "genotypeGVCFs.snpsVariantRecalibrator.hapmap_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/hapmap_3.3.hg19.sites.vcf.gz",
+            "genotypeGVCFs.snpsVariantRecalibrator.hapmap_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/hapmap_3.3.hg19.sites.vcf.gz.tbi",
+            "genotypeGVCFs.snpsVariantRecalibrator.jobMemory": null,
+            "genotypeGVCFs.snpsVariantRecalibrator.max_gaussians": null,
+            "genotypeGVCFs.snpsVariantRecalibrator.modules": "gatk/4.1.7.0 hg19-gatk-genotype-gvcfs/2.0 hg19-dbsnp-leftaligned/138",
+            "genotypeGVCFs.snpsVariantRecalibrator.omni_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_omni2.5.hg19.sites.vcf.gz",
+            "genotypeGVCFs.snpsVariantRecalibrator.omni_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_omni2.5.hg19.sites.vcf.gz.tbi",
+            "genotypeGVCFs.snpsVariantRecalibrator.one_thousand_genomes_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_phase1.snps.high_confidence.hg19.sites.vcf.gz",
+            "genotypeGVCFs.snpsVariantRecalibrator.one_thousand_genomes_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_phase1.snps.high_confidence.hg19.sites.vcf.gz.tbi",
+            "genotypeGVCFs.snpsVariantRecalibrator.overhead": null,
+            "genotypeGVCFs.snpsVariantRecalibrator.recalibration_annotation_values": null,
+            "genotypeGVCFs.snpsVariantRecalibrator.recalibration_tranche_values": null,
+            "genotypeGVCFs.snpsVariantRecalibrator.timeout": null,
+            "genotypeGVCFs.splitStringToArray.cores": null,
+            "genotypeGVCFs.splitStringToArray.jobMemory": null,
+            "genotypeGVCFs.splitStringToArray.lineSeparator": null,
+            "genotypeGVCFs.splitStringToArray.timeout": null,
+            "genotypeGVCFs.vcfIndices": [
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_1.g.vcf.gz.tbi",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_3.g.vcf.gz.tbi",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_2.g.vcf.gz.tbi",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                }
+            ],
+            "genotypeGVCFs.vcfs": [
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_1.g.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_3.g.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_2.g.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                }
+            ]
+        },
+        "description": "run genotypeGVCFs without hardfilter without VQSR",
+        "engineArguments": {},
+        "id": "genotypeGVCFs",
+        "metadata": {
+            "genotypeGVCFs.detail_metrics_file": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_genotypeGVCFs_genotypeGVCFs_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "genotypeGVCFs.output_raw_vcf": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_genotypeGVCFs_genotypeGVCFs_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "genotypeGVCFs.output_raw_vcf_index": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_genotypeGVCFs_genotypeGVCFs_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "genotypeGVCFs.output_recalibrated_vcf": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_genotypeGVCFs_genotypeGVCFs_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "genotypeGVCFs.output_recalibrated_vcf_index": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_genotypeGVCFs_genotypeGVCFs_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "genotypeGVCFs.summary_metrics_file": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_genotypeGVCFs_genotypeGVCFs_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/./calculate.sh",
+                "metrics_compare": "@CHECKOUT@/./compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/genotypeGVCFs/2.0/output_metrics/genotypeGVCFs.metrics",
+                "type": "script"
+            }
+        ]
+    },
+    {
+        "arguments": {
+            "genotypeGVCFs.applyRecalibration.cores": null,
+            "genotypeGVCFs.applyRecalibration.extraArgsIndel": null,
+            "genotypeGVCFs.applyRecalibration.extraArgsSNP": null,
+            "genotypeGVCFs.applyRecalibration.indel_filter_level": null,
+            "genotypeGVCFs.applyRecalibration.jobMemory": null,
+            "genotypeGVCFs.applyRecalibration.modules": null,
+            "genotypeGVCFs.applyRecalibration.overhead": null,
+            "genotypeGVCFs.applyRecalibration.snp_filter_level": null,
+            "genotypeGVCFs.applyRecalibration.timeout": null,
+            "genotypeGVCFs.callGenomicsDBImport.cores": null,
+            "genotypeGVCFs.callGenomicsDBImport.extraArgs": null,
+            "genotypeGVCFs.callGenomicsDBImport.jobMemory": null,
+            "genotypeGVCFs.callGenomicsDBImport.modules": null,
+            "genotypeGVCFs.callGenomicsDBImport.overhead": null,
+            "genotypeGVCFs.callGenomicsDBImport.timeout": null,
+            "genotypeGVCFs.callGenotypeGVCFs.cores": null,
+            "genotypeGVCFs.callGenotypeGVCFs.dbsnpFilePath": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+            "genotypeGVCFs.callGenotypeGVCFs.extraArgs": null,
+            "genotypeGVCFs.callGenotypeGVCFs.jobMemory": null,
+            "genotypeGVCFs.callGenotypeGVCFs.modules": "gatk/4.1.7.0 hg19/p13 hg19-dbsnp-leftaligned/138",
+            "genotypeGVCFs.callGenotypeGVCFs.overhead": null,
+            "genotypeGVCFs.callGenotypeGVCFs.refFasta": "$HG19_ROOT/hg19_random.fa",
+            "genotypeGVCFs.callGenotypeGVCFs.standCallConf": null,
+            "genotypeGVCFs.callGenotypeGVCFs.timeout": null,
+            "genotypeGVCFs.collectVariantCallingMetrics.cores": null,
+            "genotypeGVCFs.collectVariantCallingMetrics.dbsnp_vcf": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+            "genotypeGVCFs.collectVariantCallingMetrics.dbsnp_vcf_index": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz.tbi",
+            "genotypeGVCFs.collectVariantCallingMetrics.extraArgs": null,
+            "genotypeGVCFs.collectVariantCallingMetrics.jobMemory": null,
+            "genotypeGVCFs.collectVariantCallingMetrics.modules": "gatk/4.1.7.0 hg19/p13 hg19-dbsnp-leftaligned/138",
+            "genotypeGVCFs.collectVariantCallingMetrics.overhead": null,
+            "genotypeGVCFs.collectVariantCallingMetrics.ref_dict": "$HG19_ROOT/hg19_random.dict",
+            "genotypeGVCFs.collectVariantCallingMetrics.timeout": null,
+            "genotypeGVCFs.doHardFilter": false,
+            "genotypeGVCFs.doVQSR": true,
+            "genotypeGVCFs.gatherVcfs.cores": null,
+            "genotypeGVCFs.gatherVcfs.extraArgs": null,
+            "genotypeGVCFs.gatherVcfs.jobMemory": null,
+            "genotypeGVCFs.gatherVcfs.modules": null,
+            "genotypeGVCFs.gatherVcfs.overhead": null,
+            "genotypeGVCFs.gatherVcfs.timeout": null,
+            "genotypeGVCFs.hardFilter.cores": null,
+            "genotypeGVCFs.hardFilter.excess_het_threshold": null,
+            "genotypeGVCFs.hardFilter.extraArgs": null,
+            "genotypeGVCFs.hardFilter.jobMemory": null,
+            "genotypeGVCFs.hardFilter.modules": null,
+            "genotypeGVCFs.hardFilter.overhead": null,
+            "genotypeGVCFs.hardFilter.timeout": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.axiomPoly_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Axiom_Exome_Plus.genotypes.all_populations.poly.vcf.gz.tbi",
+            "genotypeGVCFs.indelsVariantRecalibrator.axiomPoly_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Axiom_Exome_Plus.genotypes.all_populations.poly.vcf.gz",
+            "genotypeGVCFs.indelsVariantRecalibrator.cores": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.dbsnp_vcf": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+            "genotypeGVCFs.indelsVariantRecalibrator.dbsnp_vcf_index": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz.tbi",
+            "genotypeGVCFs.indelsVariantRecalibrator.extraArgs": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.jobMemory": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.max_gaussians": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.mills_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Mills_and_1000G_gold_standard.indels.hg19.sites.vcf.gz",
+            "genotypeGVCFs.indelsVariantRecalibrator.mills_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Mills_and_1000G_gold_standard.indels.hg19.sites.vcf.gz.tbi",
+            "genotypeGVCFs.indelsVariantRecalibrator.modules": "gatk/4.1.7.0 hg19-gatk-genotype-gvcfs/2.0 hg19-dbsnp-leftaligned/138",
+            "genotypeGVCFs.indelsVariantRecalibrator.overhead": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.recalibration_annotation_values": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.recalibration_tranche_values": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.timeout": null,
+            "genotypeGVCFs.intervalsToParallelizeBy": "chr1,chr2,chr3,chr4,chr5,chr6,chr7,chr8,chr9,chr10,chr11,chr12,chr13,chr14,chr15,chr16,chr17,chr18,chr19,chr20,chr21,chr22,chrX,chrY",
+            "genotypeGVCFs.makeSitesOnlyVcf.cores": null,
+            "genotypeGVCFs.makeSitesOnlyVcf.extraArgs": null,
+            "genotypeGVCFs.makeSitesOnlyVcf.jobMemory": null,
+            "genotypeGVCFs.makeSitesOnlyVcf.modules": null,
+            "genotypeGVCFs.makeSitesOnlyVcf.overhead": null,
+            "genotypeGVCFs.makeSitesOnlyVcf.timeout": null,
+            "genotypeGVCFs.outputFileNamePrefix": "TGL38_0006",
+            "genotypeGVCFs.snpsVariantRecalibrator.cores": null,
+            "genotypeGVCFs.snpsVariantRecalibrator.dbsnp_vcf": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+            "genotypeGVCFs.snpsVariantRecalibrator.dbsnp_vcf_index": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz.tbi",
+            "genotypeGVCFs.snpsVariantRecalibrator.extraArgs": null,
+            "genotypeGVCFs.snpsVariantRecalibrator.hapmap_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/hapmap_3.3.hg19.sites.vcf.gz",
+            "genotypeGVCFs.snpsVariantRecalibrator.hapmap_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/hapmap_3.3.hg19.sites.vcf.gz.tbi",
+            "genotypeGVCFs.snpsVariantRecalibrator.jobMemory": null,
+            "genotypeGVCFs.snpsVariantRecalibrator.max_gaussians": null,
+            "genotypeGVCFs.snpsVariantRecalibrator.modules": "gatk/4.1.7.0 hg19-gatk-genotype-gvcfs/2.0 hg19-dbsnp-leftaligned/138",
+            "genotypeGVCFs.snpsVariantRecalibrator.omni_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_omni2.5.hg19.sites.vcf.gz",
+            "genotypeGVCFs.snpsVariantRecalibrator.omni_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_omni2.5.hg19.sites.vcf.gz.tbi",
+            "genotypeGVCFs.snpsVariantRecalibrator.one_thousand_genomes_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_phase1.snps.high_confidence.hg19.sites.vcf.gz",
+            "genotypeGVCFs.snpsVariantRecalibrator.one_thousand_genomes_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_phase1.snps.high_confidence.hg19.sites.vcf.gz.tbi",
+            "genotypeGVCFs.snpsVariantRecalibrator.overhead": null,
+            "genotypeGVCFs.snpsVariantRecalibrator.recalibration_annotation_values": null,
+            "genotypeGVCFs.snpsVariantRecalibrator.recalibration_tranche_values": null,
+            "genotypeGVCFs.snpsVariantRecalibrator.timeout": null,
+            "genotypeGVCFs.splitStringToArray.cores": null,
+            "genotypeGVCFs.splitStringToArray.jobMemory": null,
+            "genotypeGVCFs.splitStringToArray.lineSeparator": null,
+            "genotypeGVCFs.splitStringToArray.timeout": null,
+            "genotypeGVCFs.vcfIndices": [
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_1.g.vcf.gz.tbi",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_3.g.vcf.gz.tbi",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_2.g.vcf.gz.tbi",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                }
+            ],
+            "genotypeGVCFs.vcfs": [
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_1.g.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_3.g.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_2.g.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                }
+            ]
+        },
+        "description": "run genotypeGVCFs without hardfilter withVQSR",
+        "engineArguments": {},
+        "id": "genotypeGVCFs_nohardfilter_VQSR",
+        "metadata": {
+            "genotypeGVCFs.detail_metrics_file": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_genotypeGVCFs_genotypeGVCFs_nohardfilter_VQSR_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "genotypeGVCFs.output_raw_vcf": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_genotypeGVCFs_genotypeGVCFs_nohardfilter_VQSR_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "genotypeGVCFs.output_raw_vcf_index": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_genotypeGVCFs_genotypeGVCFs_nohardfilter_VQSR_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "genotypeGVCFs.output_recalibrated_vcf": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_genotypeGVCFs_genotypeGVCFs_nohardfilter_VQSR_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "genotypeGVCFs.output_recalibrated_vcf_index": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_genotypeGVCFs_genotypeGVCFs_nohardfilter_VQSR_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "genotypeGVCFs.summary_metrics_file": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_genotypeGVCFs_genotypeGVCFs_nohardfilter_VQSR_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/./calculate.sh",
+                "metrics_compare": "@CHECKOUT@/./compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/genotypeGVCFs/2.0/output_metrics/genotypeGVCFs_nohardfilter_VQSR.metrics",
+                "type": "script"
+            }
+        ]
+    },
+    {
+        "arguments": {
+            "genotypeGVCFs.applyRecalibration.cores": null,
+            "genotypeGVCFs.applyRecalibration.extraArgsIndel": null,
+            "genotypeGVCFs.applyRecalibration.extraArgsSNP": null,
+            "genotypeGVCFs.applyRecalibration.indel_filter_level": null,
+            "genotypeGVCFs.applyRecalibration.jobMemory": null,
+            "genotypeGVCFs.applyRecalibration.modules": null,
+            "genotypeGVCFs.applyRecalibration.overhead": null,
+            "genotypeGVCFs.applyRecalibration.snp_filter_level": null,
+            "genotypeGVCFs.applyRecalibration.timeout": null,
+            "genotypeGVCFs.callGenomicsDBImport.cores": null,
+            "genotypeGVCFs.callGenomicsDBImport.extraArgs": null,
+            "genotypeGVCFs.callGenomicsDBImport.jobMemory": null,
+            "genotypeGVCFs.callGenomicsDBImport.modules": null,
+            "genotypeGVCFs.callGenomicsDBImport.overhead": null,
+            "genotypeGVCFs.callGenomicsDBImport.timeout": null,
+            "genotypeGVCFs.callGenotypeGVCFs.cores": null,
+            "genotypeGVCFs.callGenotypeGVCFs.dbsnpFilePath": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+            "genotypeGVCFs.callGenotypeGVCFs.extraArgs": null,
+            "genotypeGVCFs.callGenotypeGVCFs.jobMemory": null,
+            "genotypeGVCFs.callGenotypeGVCFs.modules": "gatk/4.1.7.0 hg19/p13 hg19-dbsnp-leftaligned/138",
+            "genotypeGVCFs.callGenotypeGVCFs.overhead": null,
+            "genotypeGVCFs.callGenotypeGVCFs.refFasta": "$HG19_ROOT/hg19_random.fa",
+            "genotypeGVCFs.callGenotypeGVCFs.standCallConf": null,
+            "genotypeGVCFs.callGenotypeGVCFs.timeout": null,
+            "genotypeGVCFs.collectVariantCallingMetrics.cores": null,
+            "genotypeGVCFs.collectVariantCallingMetrics.dbsnp_vcf": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+            "genotypeGVCFs.collectVariantCallingMetrics.dbsnp_vcf_index": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz.tbi",
+            "genotypeGVCFs.collectVariantCallingMetrics.extraArgs": null,
+            "genotypeGVCFs.collectVariantCallingMetrics.jobMemory": null,
+            "genotypeGVCFs.collectVariantCallingMetrics.modules": "gatk/4.1.7.0 hg19/p13 hg19-dbsnp-leftaligned/138",
+            "genotypeGVCFs.collectVariantCallingMetrics.overhead": null,
+            "genotypeGVCFs.collectVariantCallingMetrics.ref_dict": "$HG19_ROOT/hg19_random.dict",
+            "genotypeGVCFs.collectVariantCallingMetrics.timeout": null,
+            "genotypeGVCFs.doHardFilter": true,
+            "genotypeGVCFs.doVQSR": true,
+            "genotypeGVCFs.gatherVcfs.cores": null,
+            "genotypeGVCFs.gatherVcfs.extraArgs": null,
+            "genotypeGVCFs.gatherVcfs.jobMemory": null,
+            "genotypeGVCFs.gatherVcfs.modules": null,
+            "genotypeGVCFs.gatherVcfs.overhead": null,
+            "genotypeGVCFs.gatherVcfs.timeout": null,
+            "genotypeGVCFs.hardFilter.cores": null,
+            "genotypeGVCFs.hardFilter.excess_het_threshold": null,
+            "genotypeGVCFs.hardFilter.extraArgs": null,
+            "genotypeGVCFs.hardFilter.jobMemory": null,
+            "genotypeGVCFs.hardFilter.modules": null,
+            "genotypeGVCFs.hardFilter.overhead": null,
+            "genotypeGVCFs.hardFilter.timeout": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.axiomPoly_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Axiom_Exome_Plus.genotypes.all_populations.poly.vcf.gz.tbi",
+            "genotypeGVCFs.indelsVariantRecalibrator.axiomPoly_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Axiom_Exome_Plus.genotypes.all_populations.poly.vcf.gz",
+            "genotypeGVCFs.indelsVariantRecalibrator.cores": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.dbsnp_vcf": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+            "genotypeGVCFs.indelsVariantRecalibrator.dbsnp_vcf_index": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz.tbi",
+            "genotypeGVCFs.indelsVariantRecalibrator.extraArgs": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.jobMemory": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.max_gaussians": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.mills_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Mills_and_1000G_gold_standard.indels.hg19.sites.vcf.gz",
+            "genotypeGVCFs.indelsVariantRecalibrator.mills_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/Mills_and_1000G_gold_standard.indels.hg19.sites.vcf.gz.tbi",
+            "genotypeGVCFs.indelsVariantRecalibrator.modules": "gatk/4.1.7.0 hg19-gatk-genotype-gvcfs/2.0 hg19-dbsnp-leftaligned/138",
+            "genotypeGVCFs.indelsVariantRecalibrator.overhead": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.recalibration_annotation_values": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.recalibration_tranche_values": null,
+            "genotypeGVCFs.indelsVariantRecalibrator.timeout": null,
+            "genotypeGVCFs.intervalsToParallelizeBy": "chr1,chr2,chr3,chr4,chr5,chr6,chr7,chr8,chr9,chr10,chr11,chr12,chr13,chr14,chr15,chr16,chr17,chr18,chr19,chr20,chr21,chr22,chrX,chrY",
+            "genotypeGVCFs.makeSitesOnlyVcf.cores": null,
+            "genotypeGVCFs.makeSitesOnlyVcf.extraArgs": null,
+            "genotypeGVCFs.makeSitesOnlyVcf.jobMemory": null,
+            "genotypeGVCFs.makeSitesOnlyVcf.modules": null,
+            "genotypeGVCFs.makeSitesOnlyVcf.overhead": null,
+            "genotypeGVCFs.makeSitesOnlyVcf.timeout": null,
+            "genotypeGVCFs.outputFileNamePrefix": "TGL38_0006",
+            "genotypeGVCFs.snpsVariantRecalibrator.cores": null,
+            "genotypeGVCFs.snpsVariantRecalibrator.dbsnp_vcf": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
+            "genotypeGVCFs.snpsVariantRecalibrator.dbsnp_vcf_index": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz.tbi",
+            "genotypeGVCFs.snpsVariantRecalibrator.extraArgs": null,
+            "genotypeGVCFs.snpsVariantRecalibrator.hapmap_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/hapmap_3.3.hg19.sites.vcf.gz",
+            "genotypeGVCFs.snpsVariantRecalibrator.hapmap_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/hapmap_3.3.hg19.sites.vcf.gz.tbi",
+            "genotypeGVCFs.snpsVariantRecalibrator.jobMemory": null,
+            "genotypeGVCFs.snpsVariantRecalibrator.max_gaussians": null,
+            "genotypeGVCFs.snpsVariantRecalibrator.modules": "gatk/4.1.7.0 hg19-gatk-genotype-gvcfs/2.0 hg19-dbsnp-leftaligned/138",
+            "genotypeGVCFs.snpsVariantRecalibrator.omni_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_omni2.5.hg19.sites.vcf.gz",
+            "genotypeGVCFs.snpsVariantRecalibrator.omni_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_omni2.5.hg19.sites.vcf.gz.tbi",
+            "genotypeGVCFs.snpsVariantRecalibrator.one_thousand_genomes_vcf": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_phase1.snps.high_confidence.hg19.sites.vcf.gz",
+            "genotypeGVCFs.snpsVariantRecalibrator.one_thousand_genomes_vcf_index": "$HG19_GATK_GENOTYPE_GVCFS_ROOT/1000G_phase1.snps.high_confidence.hg19.sites.vcf.gz.tbi",
+            "genotypeGVCFs.snpsVariantRecalibrator.overhead": null,
+            "genotypeGVCFs.snpsVariantRecalibrator.recalibration_annotation_values": null,
+            "genotypeGVCFs.snpsVariantRecalibrator.recalibration_tranche_values": null,
+            "genotypeGVCFs.snpsVariantRecalibrator.timeout": null,
+            "genotypeGVCFs.splitStringToArray.cores": null,
+            "genotypeGVCFs.splitStringToArray.jobMemory": null,
+            "genotypeGVCFs.splitStringToArray.lineSeparator": null,
+            "genotypeGVCFs.splitStringToArray.timeout": null,
+            "genotypeGVCFs.vcfIndices": [
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_1.g.vcf.gz.tbi",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_3.g.vcf.gz.tbi",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_2.g.vcf.gz.tbi",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                }
+            ],
+            "genotypeGVCFs.vcfs": [
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_1.g.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_3.g.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_2.g.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                }
+            ]
+        },
+        "description": "run genotypeGVCFs with hardfilter withVQSR",
+        "engineArguments": {},
+        "id": "genotypeGVCFs_hardfilter_VQSR",
+        "metadata": {
+            "genotypeGVCFs.detail_metrics_file": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_genotypeGVCFs_genotypeGVCFs_hardfilter_VQSR_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "genotypeGVCFs.output_raw_vcf": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_genotypeGVCFs_genotypeGVCFs_hardfilter_VQSR_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "genotypeGVCFs.output_raw_vcf_index": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_genotypeGVCFs_genotypeGVCFs_hardfilter_VQSR_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "genotypeGVCFs.output_recalibrated_vcf": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_genotypeGVCFs_genotypeGVCFs_hardfilter_VQSR_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "genotypeGVCFs.output_recalibrated_vcf_index": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_genotypeGVCFs_genotypeGVCFs_hardfilter_VQSR_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "genotypeGVCFs.summary_metrics_file": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_genotypeGVCFs_genotypeGVCFs_hardfilter_VQSR_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/./calculate.sh",
+                "metrics_compare": "@CHECKOUT@/./compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/genotypeGVCFs/2.0/output_metrics/genotypeGVCFs_hardfilter_VQSR.metrics",
+                "type": "script"
+            }
+        ]
+    }
+]
