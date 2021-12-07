@@ -225,8 +225,8 @@
         },
         "validators": [
             {
-                "metrics_calculate": "@CHECKOUT@/./calculate.sh",
-                "metrics_compare": "@CHECKOUT@/./compare.sh",
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
                 "output_metrics": "/.mounts/labs/gsi/testdata/genotypeGVCFs/2.0/output_metrics/genotypeGVCFs.metrics",
                 "type": "script"
             }
@@ -458,8 +458,8 @@
         },
         "validators": [
             {
-                "metrics_calculate": "@CHECKOUT@/./calculate.sh",
-                "metrics_compare": "@CHECKOUT@/./compare.sh",
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
                 "output_metrics": "/.mounts/labs/gsi/testdata/genotypeGVCFs/2.0/output_metrics/genotypeGVCFs_nohardfilter_VQSR.metrics",
                 "type": "script"
             }
@@ -691,8 +691,8 @@
         },
         "validators": [
             {
-                "metrics_calculate": "@CHECKOUT@/./calculate.sh",
-                "metrics_compare": "@CHECKOUT@/./compare.sh",
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
                 "output_metrics": "/.mounts/labs/gsi/testdata/genotypeGVCFs/2.0/output_metrics/genotypeGVCFs_hardfilter_VQSR.metrics",
                 "type": "script"
             }
