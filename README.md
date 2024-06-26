@@ -130,40 +130,182 @@ Parameter|Value|Default|Description
 
 ### Outputs
 
-Output | Type | Description
----|---|---
-`output_raw_vcf`|File|Merged raw vcf
-`output_raw_vcf_index`|File|Merged raw vcf index
-`detail_metrics_file`|File?|The output detailed metrics report file
-`summary_metrics_file`|File?|The output summary metrics report file.
-`output_recalibrated_vcf`|File?|The output recalibrated VCF file in which each variant is annotated with its VQSLOD value
-`output_recalibrated_vcf_index`|File?|The output recalibrated VCF index file
+Output | Type | Description | Labels
+---|---|---|---
+`output_raw_vcf`|File|Merged raw vcf|
+`output_raw_vcf_index`|File|Merged raw vcf index|
+`detail_metrics_file`|File?|The output detailed metrics report file|
+`summary_metrics_file`|File?|The output summary metrics report file.|
+`output_recalibrated_vcf`|File?|The output recalibrated VCF file in which each variant is annotated with its VQSLOD value|
+`output_recalibrated_vcf_index`|File?|The output recalibrated VCF index file|
 
 
-## Niassa + Cromwell
-
-This WDL workflow is wrapped in a Niassa workflow (https://github.com/oicr-gsi/pipedev/tree/master/pipedev-niassa-cromwell-workflow) so that it can used with the Niassa metadata tracking system (https://github.com/oicr-gsi/niassa).
-
-* Building
+## Commands
+ 
+This section lists command(s) run by genotypegvcfs workflow
+ 
+* Running genotypegvcfs
+ 
+### Format intervals for parallel execution
+ 
 ```
-mvn clean install
+     echo "~{intervalsToParallelizeBy}" | tr '~{lineSeparator}' '\n'
 ```
-
-* Testing
+ 
+### Run GenomicsDBImport
+ 
 ```
-mvn clean verify \
--Djava_opts="-Xmx1g -XX:+UseG1GC -XX:+UseStringDeduplication" \
--DrunTestThreads=2 \
--DskipITs=false \
--DskipRunITs=false \
--DworkingDirectory=/path/to/tmp/ \
--DschedulingHost=niassa_oozie_host \
--DwebserviceUrl=http://niassa-url:8080 \
--DwebserviceUser=niassa_user \
--DwebservicePassword=niassa_user_password \
--Dcromwell-host=http://cromwell-url:8000
+     set -euo pipefail
+     mkdir -p ~{tmpDir}
+ 
+     gatk --java-options -Xmx~{jobMemory - overhead}G \
+       GenomicsDBImport \
+       --genomicsdb-workspace-path ~{workspace_dir_name} \
+       -V ~{sep=" -V " vcfs} \
+       -L ~{interval} \
+       --tmp-dir=~{tmpDir} \
+       ~{extraArgs}
+ 
+       tar -cf ~{workspace_dir_name}.tar ~{workspace_dir_name}
 ```
-
+ 
+### Running GenotypeGVCFs
+ 
+```
+     set -euo pipefail
+ 
+     tar -xf ~{workspace_tar}
+     WORKSPACE=$(basename ~{workspace_tar} .tar)
+ 
+     gatk --java-options -Xmx~{jobMemory - overhead}G \
+       GenotypeGVCFs \
+       -R ~{refFasta} \
+       -V gendb://$WORKSPACE \
+       -L ~{interval} \
+       -D ~{dbsnpFilePath} \
+       -stand-call-conf ~{standCallConf}  \
+       -O "~{outputName}" \
+       ~{extraArgs}
+```
+ 
+### GatherVcfs
+ 
+```
+     set -euo pipefail
+ 
+     gatk --java-options "-Xmx~{jobMemory - overhead}G" GatherVcfs \
+     -I ~{sep=" -I " vcfs} \
+     -O ~{outputFileNamePrefix}.raw.vcf.gz \
+     ~{extraArgs}
+ 
+     tabix -p vcf ~{outputFileNamePrefix}.raw.vcf.gz
+ 
+```
+ 
+### VariantFiltration
+ 
+```
+     set -euo pipefail
+ 
+     gatk --java-options "-Xmx~{jobMemory - overhead}G" \
+       VariantFiltration \
+       --filter-expression "ExcessHet > ~{excess_het_threshold}" \
+       --filter-name ExcessHet ~{extraArgs} \
+       -O ~{outputFileNamePrefix}.excesshet.vcf.gz \
+       -V ~{inputVcf}
+```
+ 
+### MakeSitesOnlyVcf
+ 
+```
+     set -euo pipefail
+ 
+     gatk --java-options "-Xmx~{jobMemory - overhead}G" \
+       MakeSitesOnlyVcf \
+       -I ~{inputVcf} ~{extraArgs} \
+       -O ~{outputFileNamePrefix}.sitesonly.vcf.gz 
+```
+ 
+### VariantRecalibrator
+ 
+```
+     set -euo pipefail
+ 
+     gatk --java-options "-Xmx~{jobMemory - overhead}G" \
+       VariantRecalibrator \
+       -V ~{inputVcf} \
+       --trust-all-polymorphic \
+       -tranche ~{sep=' -tranche ' recalibration_tranche_values} \
+       -an ~{sep=' -an ' recalibration_annotation_values} \
+       -mode INDEL \
+       --max-gaussians ~{max_gaussians} \
+       -resource:mills,known=false,training=true,truth=true,prior=12 ~{mills_vcf} \
+       -resource:axiomPoly,known=false,training=true,truth=false,prior=10 ~{axiomPoly_vcf} \
+       -resource:dbsnp,known=true,training=false,truth=false,prior=2 ~{dbsnp_vcf} \
+       ~{extraArgs} -O ~{outputFileNamePrefix}.indels.recal \
+       --tranches-file ~{outputFileNamePrefix}.indels.tranches
+```
+ 
+### VariantRecalibrator
+ 
+```
+     set -euo pipefail
+ 
+     gatk --java-options "-Xmx~{jobMemory - overhead}G" \
+       VariantRecalibrator \
+       -V ~{inputVcf} \
+       --trust-all-polymorphic \
+       -tranche ~{sep=' -tranche ' recalibration_tranche_values} \
+       -an ~{sep=' -an ' recalibration_annotation_values} \
+       -mode SNP \
+       --max-gaussians ~{max_gaussians} \
+       -resource:hapmap,known=false,training=true,truth=true,prior=15 ~{hapmap_vcf} \
+       -resource:omni,known=false,training=true,truth=true,prior=12 ~{omni_vcf} \
+       -resource:1000G,known=false,training=true,truth=false,prior=10 ~{one_thousand_genomes_vcf} \
+       -resource:dbsnp,known=true,training=false,truth=false,prior=7 ~{dbsnp_vcf} \
+       ~{extraArgs} -O ~{outputFileNamePrefix}.snps.recal \
+       --tranches-file ~{outputFileNamePrefix}.snps.tranches
+```
+ 
+### ApplyVQSR
+ 
+```
+     set -euo pipefail
+ 
+     gatk --java-options "-Xmx~{jobMemory - overhead}G" \
+       ApplyVQSR \
+       -V ~{inputVcf} \
+       --recal-file ~{indels_recalibration} \
+       --tranches-file ~{indels_tranches} \
+       --truth-sensitivity-filter-level ~{indel_filter_level} \
+       --create-output-variant-index true \
+       -mode INDEL ~{extraArgsIndel} \
+       -O ~{outputFileNamePrefix}.indels.recalibrated.vcf.gz \
+ 
+     gatk --java-options "-Xmx~{jobMemory - overhead}G" \
+       ApplyVQSR \
+       -V ~{outputFileNamePrefix}.indels.recalibrated.vcf.gz \
+       --recal-file ~{snps_recalibration} \
+       --tranches-file ~{snps_tranches} \
+       --truth-sensitivity-filter-level ~{snp_filter_level} \
+       --create-output-variant-index true \
+       -mode SNP ~{extraArgsSNP} \
+       -O ~{outputFileNamePrefix}.indels.snps.recalibrated.vcf.gz \
+```
+ 
+### CollectVariantCallingMetrics
+ 
+```
+     set -euo pipefail
+ 
+     gatk --java-options "-Xmx~{jobMemory - overhead}G" \
+       CollectVariantCallingMetrics \
+       --INPUT ~{inputVcf} \
+       --DBSNP ~{dbsnp_vcf} \
+       --SEQUENCE_DICTIONARY ~{ref_dict} ~{extraArgs} \
+       --OUTPUT ~{outputFileNamePrefix} 
+ 
+```
 ## Support
 
 For support, please file an issue on the [Github project](https://github.com/oicr-gsi) or send an email to gsi@oicr.on.ca .

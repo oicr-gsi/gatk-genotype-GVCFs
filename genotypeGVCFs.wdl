@@ -32,10 +32,16 @@ workflow genotypeGVCFs {
           url: "https://github.com/samtools/tabix"
       
       }]
-      output_meta: {
-        outputVcf: "output vcf",
-        outputVcfIndex: "output vcf index"
-      }
+    output_meta: {
+    outputVcf: {
+        description: "output vcf",
+        vidarr_label: "outputVcf"
+    },
+    outputVcfIndex: {
+        description: "output vcf index",
+        vidarr_label: "outputVcfIndex"
+    }
+}
   }
 
   call splitStringToArray {
