@@ -171,7 +171,10 @@
             ]
         },
         "description": "run genotypeGVCFs without hardfilter without VQSR",
-        "engineArguments": {},
+        "engineArguments": {
+           "write_to_cache": false,
+           "read_from_cache": false
+        },
         "id": "genotypeGVCFs",
         "metadata": {
             "genotypeGVCFs.detail_metrics_file": {
@@ -404,7 +407,10 @@
             ]
         },
         "description": "run genotypeGVCFs without hardfilter withVQSR",
-        "engineArguments": {},
+        "engineArguments": {
+           "write_to_cache": false,
+           "read_from_cache": false
+        },
         "id": "genotypeGVCFs_nohardfilter_VQSR",
         "metadata": {
             "genotypeGVCFs.detail_metrics_file": {
@@ -637,7 +643,10 @@
             ]
         },
         "description": "run genotypeGVCFs with hardfilter withVQSR",
-        "engineArguments": {},
+        "engineArguments": {
+           "write_to_cache": false,
+           "read_from_cache": false
+        },
         "id": "genotypeGVCFs_hardfilter_VQSR",
         "metadata": {
             "genotypeGVCFs.detail_metrics_file": {
