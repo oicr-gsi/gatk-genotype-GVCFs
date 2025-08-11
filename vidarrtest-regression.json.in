@@ -71,7 +71,7 @@
             "genotypeGVCFs.makeSitesOnlyVcf.modules": null,
             "genotypeGVCFs.makeSitesOnlyVcf.overhead": null,
             "genotypeGVCFs.makeSitesOnlyVcf.timeout": null,
-            "genotypeGVCFs.outputFileNamePrefix": "TGL38_0006",
+            "genotypeGVCFs.outputFileNamePrefix": "TGL_Test",
             "genotypeGVCFs.snpsVariantRecalibrator.cores": null,
             "genotypeGVCFs.snpsVariantRecalibrator.dbsnp_vcf": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
             "genotypeGVCFs.snpsVariantRecalibrator.dbsnp_vcf_index": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz.tbi",
@@ -96,7 +96,7 @@
             "genotypeGVCFs.vcfIndices": [
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_1.g.vcf.gz.tbi",
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/test_inputs/Test_1.g.vcf.gz.tbi",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -108,7 +108,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_3.g.vcf.gz.tbi",
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/test_inputs/Test_3.g.vcf.gz.tbi",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -120,7 +120,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_2.g.vcf.gz.tbi",
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/test_inputs/Test_2.g.vcf.gz.tbi",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -134,7 +134,7 @@
             "genotypeGVCFs.vcfs": [
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_1.g.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/test_inputs/Test_1.g.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -146,7 +146,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_3.g.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/test_inputs/Test_3.g.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -158,7 +158,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_2.g.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/test_inputs/Test_2.g.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -230,7 +230,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/genotypeGVCFs/2.0/output_metrics/genotypeGVCFs.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/genotypeGVCFs/output_metrics/workflow_test_01.metrics",
                 "type": "script"
             }
         ]
@@ -307,7 +307,7 @@
             "genotypeGVCFs.makeSitesOnlyVcf.modules": null,
             "genotypeGVCFs.makeSitesOnlyVcf.overhead": null,
             "genotypeGVCFs.makeSitesOnlyVcf.timeout": null,
-            "genotypeGVCFs.outputFileNamePrefix": "TGL38_0006",
+            "genotypeGVCFs.outputFileNamePrefix": "TGL_Test",
             "genotypeGVCFs.snpsVariantRecalibrator.cores": null,
             "genotypeGVCFs.snpsVariantRecalibrator.dbsnp_vcf": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
             "genotypeGVCFs.snpsVariantRecalibrator.dbsnp_vcf_index": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz.tbi",
@@ -332,7 +332,7 @@
             "genotypeGVCFs.vcfIndices": [
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_1.g.vcf.gz.tbi",
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/test_inputs/Test_1.g.vcf.gz.tbi",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -344,7 +344,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_3.g.vcf.gz.tbi",
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/test_inputs/Test_3.g.vcf.gz.tbi",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -356,7 +356,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_2.g.vcf.gz.tbi",
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/test_inputs/Test_2.g.vcf.gz.tbi",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -370,7 +370,7 @@
             "genotypeGVCFs.vcfs": [
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_1.g.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/test_inputs/Test_1.g.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -382,7 +382,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_3.g.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/test_inputs/Test_3.g.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -394,7 +394,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_2.g.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/test_inputs/Test_2.g.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -466,7 +466,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/genotypeGVCFs/2.0/output_metrics/genotypeGVCFs_nohardfilter_VQSR.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/genotypeGVCFs/output_metrics/workflow_test_02.metrics",
                 "type": "script"
             }
         ]
@@ -543,7 +543,7 @@
             "genotypeGVCFs.makeSitesOnlyVcf.modules": null,
             "genotypeGVCFs.makeSitesOnlyVcf.overhead": null,
             "genotypeGVCFs.makeSitesOnlyVcf.timeout": null,
-            "genotypeGVCFs.outputFileNamePrefix": "TGL38_0006",
+            "genotypeGVCFs.outputFileNamePrefix": "TGL_Test",
             "genotypeGVCFs.snpsVariantRecalibrator.cores": null,
             "genotypeGVCFs.snpsVariantRecalibrator.dbsnp_vcf": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz",
             "genotypeGVCFs.snpsVariantRecalibrator.dbsnp_vcf_index": "$HG19_DBSNP_LEFTALIGNED_ROOT/dbsnp_138.hg19.leftAligned.vcf.gz.tbi",
@@ -568,7 +568,7 @@
             "genotypeGVCFs.vcfIndices": [
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_1.g.vcf.gz.tbi",
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/test_inputs/Test_1.g.vcf.gz.tbi",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -580,7 +580,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_3.g.vcf.gz.tbi",
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/test_inputs/Test_3.g.vcf.gz.tbi",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -592,7 +592,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_2.g.vcf.gz.tbi",
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/test_inputs/Test_2.g.vcf.gz.tbi",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -606,7 +606,7 @@
             "genotypeGVCFs.vcfs": [
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_1.g.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/test_inputs/Test_1.g.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -618,7 +618,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_3.g.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/test_inputs/Test_3.g.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -630,7 +630,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/input_data/TGL38_0006_Pn_P_EX_MPNST6_2.g.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/genotypeGVCFs/test_inputs/Test_2.g.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -702,7 +702,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/genotypeGVCFs/2.0/output_metrics/genotypeGVCFs_hardfilter_VQSR.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/genotypeGVCFs/output_metrics/workflow_test_03.metrics",
                 "type": "script"
             }
         ]
